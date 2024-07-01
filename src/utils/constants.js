@@ -1,0 +1,1 @@
+export const ARROW_URL="https://img.icons8.com/material-two-tone/24/000000/long-arrow-right.png";
