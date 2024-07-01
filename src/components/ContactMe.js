@@ -4,7 +4,7 @@ const ContactMe = () => {
   return (
     <div className='flex flex-col h-screen bg-[#010B13] mt-5 gap-6 sm:gap-5'>
         <h1 className='font-bold text-4xl'>Contact me</h1>
-        <div>
+        <div className='bg-yellow-400 text-black'>
             <div className='flex'>
             <p>Email</p>
             <p>kundermeghashree279@gmail.com</p>
@@ -15,7 +15,7 @@ const ContactMe = () => {
             </div>
             <div className='flex'>
             <p>Github</p>
-            <p>kundermeghashree279@gmail.com</p>
+            <p>https://github.com/MeghashreeK</p>
             </div>
         </div>
 
