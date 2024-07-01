@@ -5,8 +5,8 @@ import cravingsImg from "../images/cravingsPorfolio.png";
 
 const ReactProjects = () => {
   return (
-    <div className='flex flex-col gap-2'>
-        <h1 className='font-bold text-xl sm:text-4xl'>ReactJS Projects</h1>
+    <div className='flex flex-col gap-6 sm:gap-5'>
+        <h1 className='font-bold text-4xl'>ReactJS Projects</h1>
             <div className='flex gap-5 flex-wrap'>
 
             <div className='w-full lg:w-[30%] bg-[#01796F] rounded-lg'>

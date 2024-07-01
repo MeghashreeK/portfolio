@@ -9,10 +9,6 @@ const AboutMe = () => {
                 With it installed in the code editor you are using, you can type “lorem” and then tab and it will expand into a paragraph of Lorem Ipsum placeholder text.
                 But it can do more! You can control how much you get, place it within HTML structure as it expands, and get different bits of it in repeated elements.
             </p>
-            <button className='flex gap-1 focus:outline-none bg-white p-2 px-3 rounded-[50px] transition duration-300 hover:bg-opacity-50'>
-                <p className='text-black font-bold'>My Projects</p>
-                <img width="24" height="24" src={ARROW_URL} alt="long-arrow-right" />
-            </button>
         </div>
     )
 }
