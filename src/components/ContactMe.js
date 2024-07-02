@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ContactMe = () => {
   return (
@@ -9,7 +10,7 @@ const ContactMe = () => {
     <div className='flex flex-col gap-4 bg-[#1E293B] rounded-lg text-white p-6 shadow-lg'>
         <div className='flex items-center gap-2 rounded-lg p-3'>
             <img width="24" height="24" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/>
-            <a href="https://github.com/MeghashreeK" className='text-yellow-400 hover:underline'>https://github.com/MeghashreeK</a>
+            <Link to="https://github.com/MeghashreeK" className='text-yellow-400 hover:underline'>https://github.com/MeghashreeK</Link>
         </div>
 
         <div className='flex items-center gap-2 rounded-lg p-3'>
@@ -19,7 +20,7 @@ const ContactMe = () => {
 
         <div className='flex items-center gap-2 rounded-lg p-3'>
             <img width="24" height="24" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/>
-            <a href="https://www.linkedin.com/in/meghashree-kunder-017166288/" className='text-yellow-400 hover:underline'>https://www.linkedin.com/in/meghashree-kunder-017166288/</a>
+            <Link to="https://www.linkedin.com/in/meghashree-kunder-017166288/" className='text-yellow-400 hover:underline'>https://www.linkedin.com/in/meghashree-kunder-017166288/</Link>
         </div>
     </div>
 </div>
