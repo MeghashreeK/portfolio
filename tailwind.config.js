@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
     theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Montserrat: ['Montserrat'],
+        Merriweather:['Merriweather']
+      }
+    },
     screens: {
       'xsm': '200px',
 

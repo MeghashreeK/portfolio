@@ -13,8 +13,8 @@ const ReactProjects = () => {
 
   return (
     <div className='flex flex-col gap-6 sm:gap-5'>
-      <h1 className='font-bold text-4xl'>ReactJS Projects</h1>
-      <div className='flex gap-5 flex-wrap'>
+      <h1 className='font-bold text-4xl font-Merriweather'>ReactJS Projects</h1>
+      <div className='flex gap-5 flex-wrap font-Montserrat'>
         {projectArray.map((projects) => 
           <div className='w-full lg:w-[30%] bg-[#1E293B] rounded-lg'>
             <img className='rounded-lg' src={projects.img} alt="food-app" />
