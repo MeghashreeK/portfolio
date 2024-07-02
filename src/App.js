@@ -6,7 +6,7 @@ const App=()=>{
   return(
     <div >
       <BrowserRouter>
-      <div className='h-screen w-screen'>
+      <div>
       <Header/>
       </div>
       </BrowserRouter>
