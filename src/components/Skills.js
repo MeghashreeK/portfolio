@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaReact, FaCss3Alt, FaHtml5, FaJava, FaGithub } from 'react-icons/fa';
-import { SiTailwindcss, SiRedux, SiTestinglibrary, SiC, SiVercel, SiNetlify, SiRender, SiJavascript } from 'react-icons/si';
+import { SiTailwindcss, SiRedux, SiTestinglibrary, SiC, SiVercel, SiNetlify, SiRender, SiJavascript, SiFirebase } from 'react-icons/si';
 
 const Skills = () => {
   const skillsArray1 = [
@@ -9,6 +9,7 @@ const Skills = () => {
     { name: "Redux", icon: <SiRedux /> },
     {name: "JavaScript", icon: <SiJavascript/>},
     { name: "Testing", icon: <SiTestinglibrary /> },
+    { name: "Firebase", icon: <SiFirebase /> },
     { name: "CSS", icon: <FaCss3Alt /> },
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "Java", icon: <FaJava /> },
@@ -23,10 +24,10 @@ const Skills = () => {
   return (
     <div className='flex flex-col h-screen bg-[#010B13] mt-5 gap-6 sm:gap-5'>
       <h1 className='font-bold text-4xl'>Technical Skills</h1>
-      <div className='flex gap-5'>
+      <div className='flex gap-8'>
         <div className='flex flex-col gap-2 flex-wrap w-1/2 text-2xl'>
           {skillsArray1.map((skills) =>
-            <div key={skills.name} className='flex items-center gap-2 py-3 px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
+            <div key={skills.name} className='flex items-center gap-2 py-2 px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
               <span>{skills.icon}</span>
               <div className='flex flex-col'>
                 <p>{skills.name}
@@ -37,7 +38,7 @@ const Skills = () => {
         </div>
         <div className='flex flex-col gap-2 w-1/2 text-2xl'>
           {skillsArray2.map((skills) =>
-            <div key={skills.name} className='flex items-center gap-2 py-3 px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
+            <div key={skills.name} className='flex items-center gap-2 py-2 px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
               <span>{skills.icon}</span>
               <p>{skills.name}
               </p>
