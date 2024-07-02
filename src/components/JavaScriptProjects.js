@@ -15,7 +15,7 @@ const JavaScriptProjects = () => {
                 <img className='rounded-lg' src={todoList} alt="food-app" />
                 <div className='flex gap-3 p-2 items-center justify-center'>
                 <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Source code</button>
-                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Live Project</button>
+                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>See Live</button>
                 </div>
             </div>
 
@@ -23,7 +23,7 @@ const JavaScriptProjects = () => {
                 <img className='rounded-lg' src={quiz} alt="food-app" />
                 <div className='flex gap-3 p-2 items-center justify-center'>
                 <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Source code</button>
-                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Live Project</button>
+                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>See Live</button>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@ const JavaScriptProjects = () => {
                 <img className='rounded-lg' src={socialMedia} alt="food-app" />
                 <div className='flex gap-3 p-2 items-center justify-center'>
                 <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Source code</button>
-                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Live Project</button>
+                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>See Live</button>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@ const JavaScriptProjects = () => {
                 <img className='rounded-lg' src={ticTacToe} alt="food-app" />
                 <div className='flex gap-3 p-2 items-center justify-center'>
                 <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Source code</button>
-                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Live Project</button>
+                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>See Live</button>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@ const JavaScriptProjects = () => {
                 <img className='rounded-lg' src={weatherApp} alt="food-app" />
                 <div className='flex gap-3 p-2 items-center justify-center'>
                 <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Source code</button>
-                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Live Project</button>
+                <button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>See Live</button>
                 </div>
             </div>
             </div>
