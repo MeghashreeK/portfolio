@@ -34,8 +34,8 @@ const Header = () => {
 
   return (
     <div className='text-white bg-[#010B13] py-2 px-4'>
-      <div className="flex justify-between w-full fixed bg-[#01796F] rounded-lg p-2">
-        {headerArray.map((headerValue,index) => <p className={`cursor-pointer ${borderState[index] ? "border-b-2" : ""}`} key={headerValue.text} onClick={() =>handleScrollEvent(index)}>{headerValue.text}</p>)}
+      <div className="flex justify-between w-full fixed bg-[#1E293B] rounded-lg p-2">
+        {headerArray.map((headerValue,index) => <p className={`cursor-pointer ${borderState[index] ? "border-b-2 border-yellow-400 text-yellow-400" : ""}`} key={headerValue.text} onClick={() =>handleScrollEvent(index)}>{headerValue.text}</p>)}
       </div>
       <div ref={aboutMe}><AboutMe /></div>
       <div ref={projects} className='flex flex-col mb-5'>

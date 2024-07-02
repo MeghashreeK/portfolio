@@ -8,8 +8,8 @@ const Skills = () => {
     <div className='flex flex-col h-screen bg-[#010B13] mt-5 gap-6 sm:gap-5'>
       <h1 className='font-bold text-4xl'>Technical Skills</h1>
       <div className='flex flex-col gap-5'>
-        <div className='flex gap-2'>{skillsArray1.map((skills)=><p className='py-2 px-4 font-bold rounded-[50px] bg-yellow-400 text-black'>{skills}</p>)}</div>
-        <div className='flex gap-2'>{skillsArray2.map((skills)=><p className='py-2 px-4  font-bold rounded-[50px] bg-yellow-400 text-black'>{skills}</p>)}</div>
+        <div className='flex gap-2 flex-wrap'>{skillsArray1.map((skills)=><p key={skills} className='py-2 px-4 font-bold rounded-[50px] bg-yellow-400 text-black'>{skills}</p>)}</div>
+        <div className='flex gap-2'>{skillsArray2.map((skills)=><p key={skills} className='py-2 px-4  font-bold rounded-[50px] bg-yellow-400 text-black'>{skills}</p>)}</div>
       </div>
     </div>
   )
