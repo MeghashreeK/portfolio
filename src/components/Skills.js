@@ -25,7 +25,7 @@ const Skills = () => {
     <div className='flex flex-col h-screen bg-[#010B13] mt-5 gap-6 sm:gap-5'>
       <h1 className='font-bold text-4xl'>Technical Skills</h1>
       <div className='flex gap-8'>
-        <div className='flex flex-col gap-2 flex-wrap w-1/2 text-2xl'>
+        <div className='flex flex-col gap-2 flex-wrap w-1/2 text-xl sm:text-2xl'>
           {skillsArray1.map((skills) =>
             <div key={skills.name} className='flex items-center gap-2 py-2 px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
               <span>{skills.icon}</span>
