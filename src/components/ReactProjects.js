@@ -12,7 +12,7 @@ const ReactProjects = () => {
   ];
 
   return (
-    <div className='flex flex-col gap-6 sm:gap-5'>
+    <div className='flex flex-col gap-10 sm:gap-5'>
       <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>ReactJS Projects</h1>
       <div className='flex gap-5 flex-wrap font-Montserrat'>
         {projectArray.map((projects,key) => 

@@ -16,7 +16,7 @@ const JavaScriptProjects = () => {
         { img: weatherApp, sourceCodeLink: "https://github.com/MeghashreeK/weatherWebApp", seeLiveLink: "https://deft-gingersnap-ed1768.netlify.app/" },
     ];
     return (
-        <div className='flex flex-col gap-6 sm:gap-5'>
+        <div className='flex flex-col gap-10 sm:gap-5'>
           <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>JavaScript Projects</h1>
           <div className='flex gap-5 flex-wrap font-Montserrat'>
             {projectArray.map((projects,index) => 

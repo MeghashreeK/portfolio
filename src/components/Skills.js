@@ -22,7 +22,7 @@ const Skills = () => {
     { name: "Render", icon: <SiRender /> }
   ];
   return (
-    <div className='flex flex-col h-screen bg-[#010B13] mt-5 gap-6 sm:gap-5'>
+    <div className='flex flex-col h-screen bg-[#010B13] mt-10 gap-10 sm:gap-5'>
       <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>Technical Skills</h1>
       <div className='flex gap-3 sm:gap-8 font-Montserrat'>
         <div className='flex flex-col gap-2 flex-wrap text-[16px] sm:text-2xl'>

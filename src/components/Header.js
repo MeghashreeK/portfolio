@@ -37,7 +37,7 @@ const Header = () => {
       <div className=' flex justify-center'>
         <div className="flex font-bold justify-between sm:justify-evenly w-[90%] sm:w-[95%] fixed bg-[#1E293B] rounded-lg p-2 text-[14px] sm:text-[16px]" >
           {headerArray.map((headerValue, index) => 
-          <div key={index} >
+          <div key={index} className='flex'>
           <p className={`hidden sm:block cursor-pointer ${borderState[index] ? "border-b-2 border-yellow-400 text-yellow-400" : ""}`} onClick={() => handleScrollEvent(index)}>
             {headerValue.text}
             </p>
