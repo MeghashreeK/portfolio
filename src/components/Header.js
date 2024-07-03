@@ -35,19 +35,18 @@ const Header = () => {
   return (
     <div className='text-white bg-[#010B13] py-2 px-4 font-Merriweather w-full'>
       <div className=' flex justify-center'>
-        <div className="flex bg-opacity-65 font-bold justify-between sm:justify-evenly w-[90%] sm:w-[95%] fixed bg-[#1E293B] rounded-lg p-2 text-[14px] sm:text-[16px]" >
+        <div className="flex font-bold justify-between sm:justify-evenly w-[90%] sm:w-[95%] fixed bg-[#1E293B] rounded-lg p-2 text-[14px] sm:text-[16px]" >
           {headerArray.map((headerValue, index) => 
-          <div>
-          <p className={`hidden sm:block cursor-pointer ${borderState[index] ? "border-b-2 border-yellow-400 text-yellow-400" : ""}`} key={headerValue.text} onClick={() => handleScrollEvent(index)}>
+          <div key={index} >
+          <p className={`hidden sm:block cursor-pointer ${borderState[index] ? "border-b-2 border-yellow-400 text-yellow-400" : ""}`} onClick={() => handleScrollEvent(index)}>
             {headerValue.text}
             </p>
                <p 
                className={`sm:hidden text-center cursor-pointer ${borderState[index] ? "border-b-2 border-yellow-400 text-yellow-400" : ""}`} 
-               key={headerValue.text} 
                onClick={() => handleScrollEvent(index)}
              >
-               {headerValue.text.split(' ').map((word, wordIndex) => (
-                 <span key={wordIndex} className="block">{word}</span>
+               {headerValue.text.split(' ').map((word,index) => (
+                 <span key={index} className="block">{word}</span>
                ))}
              </p>
           </div>

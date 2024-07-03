@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const ContactMe = () => {
   return (
     <div className='flex flex-col h-screen bg-[#010B13] mt-5 gap-6 sm:gap-5'>
-        <h1 className='font-bold text-4xl font-Merriweather'>Contact me</h1>
+        <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>Contact me</h1>
 
         <div className='flex w-full justify-center items-center h-full text-[14px] sm:text-[16px] font-Montserrat'>
     <div className='flex flex-col gap-4 bg-[#1E293B] rounded-lg w-full sm:w-1/2 text-white p-6 shadow-lg'>

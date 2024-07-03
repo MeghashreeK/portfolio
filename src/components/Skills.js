@@ -23,11 +23,11 @@ const Skills = () => {
   ];
   return (
     <div className='flex flex-col h-screen bg-[#010B13] mt-5 gap-6 sm:gap-5'>
-      <h1 className='font-bold text-4xl font-Merriweather'>Technical Skills</h1>
+      <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>Technical Skills</h1>
       <div className='flex gap-3 sm:gap-8 font-Montserrat'>
         <div className='flex flex-col gap-2 flex-wrap text-[16px] sm:text-2xl'>
-          {skillsArray1.map((skills) =>
-            <div key={skills.name} className='flex items-center gap-2 py-2 px-2 sm:px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
+          {skillsArray1.map((skills,index) =>
+            <div key={index} className='flex items-center gap-2 py-2 px-2 sm:px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
               <span>{skills.icon}</span>
               <div className='flex flex-col'>
                 <p>{skills.name}
@@ -37,8 +37,8 @@ const Skills = () => {
           )}
         </div>
         <div className='flex flex-col gap-2 text-[16px] sm:text-2xl'>
-          {skillsArray2.map((skills) =>
-            <div key={skills.name} className='flex items-center gap-2 py-2 px-2 sm:px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
+          {skillsArray2.map((skills,index) =>
+            <div key={index} className='flex items-center gap-2 py-2 px-2 sm:px-4 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300' >
               <span>{skills.icon}</span>
               <p>{skills.name}
               </p>
