@@ -1,5 +1,5 @@
 import React from 'react'
-import { GITHUB_URL, LINKEDIN_URL } from '../utils/constants';
+import { GITHUB_URL, GITHUB_YELLOW_ICON_URL, LINKEDIN_URL, LINKEDIN_YELLOW_ICON_URL } from '../utils/constants';
 import { Link } from 'react-router-dom';
 const ContactMe = () => {
 
@@ -47,10 +47,10 @@ const ContactMe = () => {
           </div>
           <div className='flex gap-1'>
             <Link to={LINKEDIN_URL}>
-              <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFD700/linkedin.png" alt="linkedin" />
+              <img width="30" height="30" src={LINKEDIN_YELLOW_ICON_URL} alt="linkedin" />
             </Link>
             <Link to={GITHUB_URL}>
-              <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFD700/github.png" alt="github" />
+              <img width="30" height="30" src={GITHUB_YELLOW_ICON_URL} alt="github" />
             </Link>
           </div>
           <button onClick={onButtonClick} className='font-bold text-[14px] sm:text-[16px] p-3 rounded-[50px] bg-[#FFD700] text-black transition duration-300 hover:bg-[#FFC107] focus:outline-none'>Download Resume</button>
