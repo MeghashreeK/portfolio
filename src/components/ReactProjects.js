@@ -3,6 +3,7 @@ import nirvanaImg from "../images/nirvanaPorfolio.png";
 import vidspaceImg from "../images/vidspacePorfolio.png";
 import cravingsImg from "../images/cravingsPorfolio.png";
 import { Link } from 'react-router-dom';
+import { GITHUB_ICON_URL, PROJECT_URL } from '../utils/constants';
 
 const ReactProjects = () => {
   const projectArray = [
@@ -28,8 +29,8 @@ const ReactProjects = () => {
           <div key={key} className='w-full lg:w-[30%] bg-[#BF40BF] rounded-lg'>
             <img className='rounded-lg' src={projects.img} alt="food-app" />
             <div className='flex gap-3 p-2 items-center justify-end'>
-              <Link to={projects.sourceCodeLink}><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="github"/></Link>
-              <Link to={projects.seeLiveLink}><img className='w-5 h-5' src="https://img.icons8.com/ios-filled/50/ffffff/link--v1.png" alt="link--v1"/></Link>
+              <Link to={projects.sourceCodeLink}><img width="30" height="30" src={GITHUB_ICON_URL} alt="github"/></Link>
+              <Link to={projects.seeLiveLink}><img className='w-5 h-5' src={PROJECT_URL} alt="link--v1"/></Link>
             </div>
           </div>
         )}
