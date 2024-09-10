@@ -17,14 +17,14 @@ const JavaScriptProjects = () => {
     ];
     return (
         <div className='flex flex-col gap-10 sm:gap-5'>
-          <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>JavaScript Projects</h1>
+          {/* <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>JavaScript Projects</h1> */}
           <div className='flex gap-5 flex-wrap font-Montserrat'>
             {projectArray.map((projects,index) => 
-              <div key={index} className='w-full lg:w-[30%] bg-[#1E293B] rounded-lg'>
+              <div key={index} className='w-full lg:w-[30%] bg-[#BF40BF] rounded-lg'>
                 <img className='rounded-lg' src={projects.img} alt="food-app" />
-                <div className='flex gap-3 p-2 items-center justify-center'>
-                  <Link to={projects.sourceCodeLink}><button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>Source code</button></Link>
-                  <Link to={projects.seeLiveLink}><button className='text-[14px] sm:text-[16px] p-1 px-2 font-bold rounded-[50px] bg-yellow-400 text-black transition duration-300 hover:bg-yellow-300'>See Live</button></Link>
+                <div className='flex gap-3 p-2 items-center justify-end'>
+                  <Link to={projects.sourceCodeLink}><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="github"/></Link>
+                  <Link to={projects.seeLiveLink}><img className='w-5 h-5' src="https://img.icons8.com/ios-filled/50/ffffff/link--v1.png" alt="link--v1"/></Link>
                 </div>
               </div>
             )}

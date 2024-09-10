@@ -15,13 +15,12 @@ const Header = () => {
   const headerArray = [
     { text: "About me", ref: aboutMe },
     { text: "Projects", ref: projects },
-    { text: "Technical Skills", ref: skills },
     { text: "Contact me", ref: contactMe }
   ];
-  const [borderState, setBorderState] = useState([false, false, false, false]);
+  const [borderState, setBorderState] = useState([false, false, false]);
 
   const handleScrollEvent = (index) => {
-    const updatedBorderState = [false, false, false, false];
+    const updatedBorderState = [false, false, false];
     updatedBorderState[index] = true;
     setBorderState(updatedBorderState);
 
@@ -33,23 +32,15 @@ const Header = () => {
   }
 
   return (
-    <div className='text-white bg-[#010B13] py-2 px-4 font-Merriweather w-full'>
+    <div className='text-white bg-[#222024] py-2 px-4 font-Merriweather w-full'>
       <div className=' flex justify-center'>
-        <div className="flex font-bold justify-between sm:justify-evenly w-[90%] sm:w-[95%] fixed bg-[#1E293B] rounded-lg p-2 text-[14px] sm:text-[16px]" >
-          {headerArray.map((headerValue, index) => 
-          <div key={index} className='flex'>
-          <p className={`hidden sm:block cursor-pointer ${borderState[index] ? "border-b-2 border-yellow-400 text-yellow-400" : ""}`} onClick={() => handleScrollEvent(index)}>
-            {headerValue.text}
-            </p>
-               <p 
-               className={`sm:hidden text-center cursor-pointer ${borderState[index] ? "border-b-2 border-yellow-400 text-yellow-400" : ""}`} 
-               onClick={() => handleScrollEvent(index)}
-             >
-               {headerValue.text.split(' ').map((word,index) => (
-                 <span key={index} className="block">{word}</span>
-               ))}
-             </p>
-          </div>
+        <div className="flex font-bold justify-between sm:justify-evenly w-[90%] sm:w-[95%] fixed bg-[#BF40BF] rounded-lg p-2 text-[14px] sm:text-[16px]" >
+          {headerArray.map((headerValue, index) =>
+            <div key={index} className='flex'>
+              <p className={`cursor-pointer ${borderState[index] ? "border-b-2 border-[#FFD700] text-[#FFD700]" : ""}`} onClick={() => handleScrollEvent(index)}>
+                {headerValue.text}
+              </p>
+            </div>
           )}
         </div>
       </div>
@@ -58,10 +49,12 @@ const Header = () => {
         <ReactProjects />
       </div>
       <JavaScriptProjects />
-      <div ref={skills}><Skills /></div>
       <div ref={contactMe}><ContactMe /></div>
     </div>
   )
 }
 
 export default Header
+
+// bg-[#010B13]
+//bg-[#1E293B] header
