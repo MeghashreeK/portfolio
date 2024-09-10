@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <div className='text-white bg-[#222024] py-2 px-4 font-Merriweather w-full'>
       <div className=' flex justify-center'>
-        <div className="flex font-bold justify-between sm:justify-evenly w-[90%] sm:w-[95%] fixed bg-[#BF40BF] rounded-lg p-2 text-[14px] sm:text-[16px]" >
+        <div className="flex font-bold justify-between sm:justify-evenly w-[90%] sm:w-[95%] fixed bg-[#BF40BF] bg-opacity-50 rounded-lg p-2 text-[14px] sm:text-[16px]" >
           {headerArray.map((headerValue, index) =>
             <div key={index} className='flex'>
               <p className={`cursor-pointer ${borderState[index] ? "border-b-2 border-[#FFD700] text-[#FFD700]" : ""}`} onClick={() => handleScrollEvent(index)}>
@@ -55,6 +55,3 @@ const Header = () => {
 }
 
 export default Header
-
-// bg-[#010B13]
-//bg-[#1E293B] header

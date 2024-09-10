@@ -51,5 +51,3 @@ const AboutMe = () => {
 
 export default AboutMe;
 
-// he hex code for bright purple is #BF40BF
-// #222024
