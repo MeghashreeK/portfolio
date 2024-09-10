@@ -1,5 +1,5 @@
 import React from 'react'
-import { GITHUB_URL, GITHUB_YELLOW_ICON_URL, LINKEDIN_URL, LINKEDIN_YELLOW_ICON_URL } from '../utils/constants';
+import { GITHUB_URL, GITHUB_YELLOW_ICON_URL, LINKEDIN_URL, LINKEDIN_YELLOW_ICON_URL, PHONE_ICON_URL } from '../utils/constants';
 import { Link } from 'react-router-dom';
 const ContactMe = () => {
 
@@ -42,7 +42,7 @@ const ContactMe = () => {
         <div className='flex flex-col gap-5 sm:h-1/2'>
           <p className='text-4xl font-extrabold'>Contact Me</p>
           <div className='flex items-center gap-1 mt-5'>
-            <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/FFD700/phone-disconnected.png" alt="phone-disconnected" />
+            <img width="25" height="25" src={PHONE_ICON_URL} alt="phone-disconnected" />
             <p className='font-bold'>+91 7411288093</p>
           </div>
           <div className='flex gap-1'>

@@ -5,3 +5,4 @@ export const GITHUB_ICON_URL="https://img.icons8.com/ios-glyphs/30/ffffff/github
 export const PROJECT_URL="https://img.icons8.com/ios-filled/50/ffffff/link--v1.png";
 export const LINKEDIN_YELLOW_ICON_URL="https://img.icons8.com/ios-filled/50/FFD700/linkedin.png";
 export const GITHUB_YELLOW_ICON_URL="https://img.icons8.com/ios-filled/50/FFD700/github.png";
+export const PHONE_ICON_URL="https://img.icons8.com/ios-filled/50/FFD700/phone-disconnected.png";
