@@ -13,8 +13,17 @@ const ReactProjects = () => {
 
   return (
     <div className='flex flex-col gap-10 sm:gap-5'>
-      <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>Projects</h1>
-      <div className='flex gap-5 flex-wrap font-Montserrat'>
+      <h1 className='flex font-extrabold text-3xl sm:text-4xl font-Merriweather justify-center gap-5 mb-3'>
+        <p>P</p>
+        <p>R</p>
+        <p>O</p>
+        <p>J</p>
+        <p>E</p>
+        <p>C</p>
+        <p>T</p>
+        <p>S</p>
+      </h1>
+      <div className='flex gap-5 flex-wrap font-Montserrat justify-center'>
         {projectArray.map((projects,key) => 
           <div key={key} className='w-full lg:w-[30%] bg-[#BF40BF] rounded-lg'>
             <img className='rounded-lg' src={projects.img} alt="food-app" />

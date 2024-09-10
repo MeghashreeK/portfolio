@@ -18,7 +18,7 @@ const JavaScriptProjects = () => {
     return (
         <div className='flex flex-col gap-10 sm:gap-5'>
           {/* <h1 className='font-bold text-3xl sm:text-4xl font-Merriweather'>JavaScript Projects</h1> */}
-          <div className='flex gap-5 flex-wrap font-Montserrat'>
+          <div className='flex gap-5 flex-wrap font-Montserrat justify-center'>
             {projectArray.map((projects,index) => 
               <div key={index} className='w-full lg:w-[30%] bg-[#BF40BF] rounded-lg'>
                 <img className='rounded-lg' src={projects.img} alt="food-app" />
