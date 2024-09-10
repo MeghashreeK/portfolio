@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import ReactTypingEffect from 'react-typing-effect'
-import profilePic from '../images/ProfilePhoto.jpg'
 
 
 const AboutMe = () => {
