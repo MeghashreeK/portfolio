@@ -39,7 +39,7 @@ const AboutMe = () => {
 
                 </div>
                 <div className='hidden sm:flex'>
-                    <img className='w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[8px] border-[#FAF9F6]' src={profilePic} />
+                    <img className='w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]' src={profilePic} />
                 </div>
             </div>
         </div>
