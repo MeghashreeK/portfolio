@@ -4,12 +4,12 @@ import ReactTypingEffect from 'react-typing-effect'
 
 
 const AboutMe = () => {
-    const [loadImg,setLoadImg]=useState(true);
-    useEffect(()=>{
-        setInterval(()=>{
-            setLoadImg(false);
-        },500)
-    },[])
+    // const [loadImg,setLoadImg]=useState(true);
+    // useEffect(()=>{
+    //     setInterval(()=>{
+    //         setLoadImg(false);
+    //     },500)
+    // },[])
     return (
         <div className="flex items-center justify-center h-screen gap-10 text-center">
             <div className='flex flex-wrap justify-center items-center gap-10'>
@@ -46,8 +46,9 @@ const AboutMe = () => {
 
                 </div>
                 <div className='hidden sm:flex'>
-                    {loadImg && <p className="bg-white w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]"></p>}
-                   {loadImg==false && <img className="w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]" src={profilePic} />}
+                    {/* {loadImg && <p className="bg-white w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]"></p>}
+                   {loadImg==false && <img className="w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]" src={profilePic} />} */}
+                <img className="w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]" src={profilePic} />
                 </div>
             </div>
         </div>
