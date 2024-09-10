@@ -5,11 +5,9 @@ import ReactTypingEffect from 'react-typing-effect'
 const AboutMe = () => {
     return (
         <div className="flex items-center justify-center h-screen gap-10 text-center">
-            {/* <h1 className='text-3xl sm:text-4xl font-bold font-Merriweather'>About me</h1> */}
-
             <div className='flex flex-wrap justify-center items-center gap-10'>
             <div className='sm:hidden'>
-                    <img className='w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]' src={profilePic} />
+                    <img className='w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[5px] border-[#FAF9F6]' src={profilePic} />
                 </div>
                 <div className='flex flex-col justify-center items-center w-full sm:w-1/2 gap-5'>
                 <div>
@@ -41,7 +39,7 @@ const AboutMe = () => {
 
                 </div>
                 <div className='hidden sm:flex'>
-                    <img className='w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[10px] border-[#FAF9F6]' src={profilePic} />
+                    <img className='w-48 h-48 sm:w-96 sm:h-96 rounded-full border-[8px] border-[#FAF9F6]' src={profilePic} />
                 </div>
             </div>
         </div>
