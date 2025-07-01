@@ -5,11 +5,13 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
   const location = useLocation();
   const navigate = useNavigate();
   const panelRef = useRef(null);
   const buttonRef = useRef(null);
 
+  // Detect scroll for background color
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
@@ -17,6 +19,15 @@ const Header = () => {
     };
     document.addEventListener('scroll', handleScroll, { passive: true });
     return () => document.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Handle resize to track desktop view
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleNavClick = (section) => {
@@ -66,10 +77,25 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuOpen]);
 
+  // Framer motion animation
+  const navVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const navItem = {
+    hidden: { opacity: 0, y: -10 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-[#0A192F]  shadow-lg' : 'bg-transparent'
+        scrolled ? 'bg-[#0A192F] shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="w-[90%] mx-auto h-[10vh] flex justify-between items-center">
@@ -110,26 +136,35 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <motion.ul className="hidden md:flex font-mono items-center justify-end  w-full text-[#CCD6F6] gap-5">
-          {menuItems.map((menuItem) => (
-            <li
-              key={menuItem.id}
-              className="hover:text-[#64FFCF] transition-colors duration-300 cursor-pointer"
-              onClick={() => handleNavClick(menuItem.section)}
-            >
-              <span className="text-[#64FFCF]">{menuItem.num}</span> {menuItem.text}
-            </li>
-          ))}
-          <a
-            href="https://drive.google.com/file/d/1XZNzOe-gI1QEzf4aTHRKFegj2zrpnyOE/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
-            className="cursor-pointer relative inline-block px-4 py-2 font-mono text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded group"
+        {isDesktop && (
+          <motion.ul
+            className="hidden md:flex font-mono items-center justify-end w-full text-[#CCD6F6] gap-5"
+            initial="hidden"
+            animate="show"
+            variants={navVariants}
           >
-            <span className="relative z-10">Resume</span>
-            <span className="absolute bottom-0 right-0 w-full h-full border-r-2 border-b-2 border-[#64FFCF] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:translate-y-1 transition-all duration-300 ease-in-out rounded" />
-          </a>
-        </motion.ul>
+            {menuItems.map((menuItem) => (
+              <motion.li
+                key={menuItem.id}
+                variants={navItem}
+                className="hover:text-[#64FFCF] transition-colors duration-300 cursor-pointer"
+                onClick={() => handleNavClick(menuItem.section)}
+              >
+                <span className="text-[#64FFCF]">{menuItem.num}</span> {menuItem.text}
+              </motion.li>
+            ))}
+            <motion.a
+              variants={navItem}
+              href="https://drive.google.com/file/d/1XZNzOe-gI1QEzf4aTHRKFegj2zrpnyOE/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="cursor-pointer relative inline-block px-4 py-2 font-mono text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded group"
+            >
+              <span className="relative z-10">Resume</span>
+              <span className="absolute bottom-0 right-0 w-full h-full border-r-2 border-b-2 border-[#64FFCF] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:translate-y-1 transition-all duration-300 ease-in-out rounded" />
+            </motion.a>
+          </motion.ul>
+        )}
 
         {/* Mobile Side Panel */}
         <AnimatePresence>
@@ -147,28 +182,27 @@ const Header = () => {
                 animate={{ x: 0 }}
                 exit={{ x: '100%' }}
                 transition={{ type: 'tween', duration: 0.4 }}
-                className="fixed top-0 right-0  h-screen w-[70%] bg-[#0A192F] p-8 flex flex-col items-start gap-6 text-white md:hidden shadow-lg z-50"
+                className="fixed top-0 right-0 h-screen w-[70%] bg-[#0A192F] p-8 flex flex-col items-start gap-6 text-white md:hidden shadow-lg z-50"
               >
-                <div className=' flex flex-col   w-full justify-center items-center gap-8 pt-10'>
-{menuItems.map((menuItem) => (
-                  <div
-                    key={menuItem.id}
-                    className="text-[20px] flex flex-col font-mono items-center justify-center cursor-pointer hover:text-[#64FFCF] transition-colors duration-300 "
-                    onClick={() => handleNavClick(menuItem.section)}
+                <div className="flex flex-col w-full justify-center items-center gap-8 pt-10">
+                  {menuItems.map((menuItem) => (
+                    <div
+                      key={menuItem.id}
+                      className="text-[20px] flex flex-col font-mono items-center justify-center cursor-pointer hover:text-[#64FFCF] transition-colors duration-300"
+                      onClick={() => handleNavClick(menuItem.section)}
+                    >
+                      <div className="text-[#64FFCF]">{menuItem.num}</div> <div>{menuItem.text}</div>
+                    </div>
+                  ))}
+                  <a
+                    href="https://drive.google.com/file/d/1XZNzOe-gI1QEzf4aTHRKFegj2zrpnyOE/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="cursor-pointer mt-4 text-center inline-block px-4 py-2 font-mono text-[20px] md:text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded"
                   >
-                    <div className="text-[#64FFCF]">{menuItem.num}</div> <div>{menuItem.text}</div>
-                  </div>
-                ))}
-                <a
-                  href="https://drive.google.com/file/d/1XZNzOe-gI1QEzf4aTHRKFegj2zrpnyOE/view?usp=sharing"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="cursor-pointer mt-4 text-center inline-block px-4 py-2 font-mono text-[20px] md:text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded"
-                >
-                  Resume
-                </a>
+                    Resume
+                  </a>
                 </div>
-                
               </motion.div>
             </>
           )}
