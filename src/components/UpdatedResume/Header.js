@@ -149,21 +149,21 @@ const Header = () => {
                 transition={{ type: 'tween', duration: 0.4 }}
                 className="fixed top-0 right-0  h-screen w-[70%] bg-[#0A192F] p-8 flex flex-col items-start gap-6 text-white md:hidden shadow-lg z-50"
               >
-                <div className=' flex flex-col gap-6 pt-10'>
+                <div className=' flex flex-col   w-full justify-center items-center gap-8 pt-10'>
 {menuItems.map((menuItem) => (
                   <div
                     key={menuItem.id}
-                    className="text-[18px] font-mono cursor-pointer hover:text-[#64FFCF] transition-colors duration-300 "
+                    className="text-[20px] flex flex-col font-mono items-center justify-center cursor-pointer hover:text-[#64FFCF] transition-colors duration-300 "
                     onClick={() => handleNavClick(menuItem.section)}
                   >
-                    <span className="text-[#64FFCF]">{menuItem.num}</span> {menuItem.text}
+                    <div className="text-[#64FFCF]">{menuItem.num}</div> <div>{menuItem.text}</div>
                   </div>
                 ))}
                 <a
                   href="https://drive.google.com/file/d/1XZNzOe-gI1QEzf4aTHRKFegj2zrpnyOE/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
-                  className="cursor-pointer mt-4 text-center inline-block px-4 py-2 font-mono text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded"
+                  className="cursor-pointer mt-4 text-center inline-block px-4 py-2 font-mono text-[20px] md:text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded"
                 >
                   Resume
                 </a>

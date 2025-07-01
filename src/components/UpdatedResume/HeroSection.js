@@ -39,7 +39,7 @@ const HeroSection = () => {
 
   return (
     <motion.div
-      className="w-[100%] h-[100vh] flex items-center  pt-20 pb-10  md:pb-20"
+      className="w-[100%] h-[100vh] flex items-center  pt-16 md:pt-40 lg:pt-20 pb-10  md:pb-20"
       initial="hidden"
       animate="show"
       variants={container}
@@ -61,7 +61,7 @@ const HeroSection = () => {
 
         <motion.a variants={item}
            onClick={() => scrollToSection('work')}
-          className="relative inline-block px-8 py-4 font-mono text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded group"
+          className="cursor-pointer relative inline-block px-8 py-4 font-mono text-[16px] text-[#64FFCF] border border-[#64FFCF] rounded group"
         >
           <span className="relative z-10">          
             Explore My Projects

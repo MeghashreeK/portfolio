@@ -71,7 +71,7 @@ const Experience = () => {
               <motion.li variants={item} className="text-[#8892b0] flex items-start gap-2">
                 <span className="text-[#64FFCF]">▸</span>
                 <span>
-                  Implemented interactive features like OTP-based login, chat systems, and file sharing for enhanced user engagement.
+                  Implemented interactive features like OTP-based login, chat interfaces for enhanced user engagement.
                 </span>
               </motion.li>
               <motion.li variants={item} className="text-[#8892b0] flex items-start gap-2">

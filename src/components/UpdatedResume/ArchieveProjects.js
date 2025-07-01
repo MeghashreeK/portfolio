@@ -11,7 +11,7 @@ const projects = [
     tech: 'React · TailwindCSS · Framer Motion',
     link: 'https://benakagoldcompany.com/',
   },
-   {
+  {
     year: '2024',
     title: 'Flicker Fantasy Website',
     company: 'Ajavu Tech House',
@@ -24,7 +24,7 @@ const projects = [
     company: '-',
     tech: 'Javascript · CSS · HTML',
     link: 'https://tic-tac-to-e.netlify.app/',
-    github:'https://github.com/MeghashreeK/tic-tac-toe'
+    github: 'https://github.com/MeghashreeK/tic-tac-toe'
   },
   {
     year: '2023',
@@ -32,7 +32,7 @@ const projects = [
     company: '-',
     tech: 'Javascript · CSS · HTML',
     link: 'https://to-do-list-e.netlify.app/',
-    github:'https://github.com/MeghashreeK/Todo-List'
+    github: 'https://github.com/MeghashreeK/Todo-List'
   },
   {
     year: '2023',
@@ -40,15 +40,15 @@ const projects = [
     company: '-',
     tech: 'Javascript · CSS · HTML',
     link: 'https://deft-gingersnap-ed1768.netlify.app/',
-    github:'https://github.com/MeghashreeK/weatherWebApp'
+    github: 'https://github.com/MeghashreeK/weatherWebApp'
   },
   {
     year: '2023',
     title: 'Social Media UI',
     company: '-',
     tech: 'Javascript · CSS · HTML',
-    link: 'https://portfolio-demo.com',
-    github:'https://github.com/MeghashreeK/social-media-design'
+    link: 'https://socialmediawebsit-e.netlify.app/',
+    github: 'https://github.com/MeghashreeK/social-media-design'
   },
   {
     year: '2022',
@@ -56,7 +56,7 @@ const projects = [
     company: '-',
     tech: 'Javascript · CSS · HTML',
     link: 'https://quizgame799.netlify.app/',
-    github:'https://github.com/MeghashreeK/Quiz'
+    github: 'https://github.com/MeghashreeK/Quiz'
   },
 ];
 
@@ -64,6 +64,11 @@ const ArchiveProjects = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px" }); // Removed negative margin
   const controls = useAnimation();
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
+
 
   React.useEffect(() => {
     if (isInView) {
@@ -84,11 +89,11 @@ const ArchiveProjects = () => {
   };
 
   const item = {
-    hidden: { 
+    hidden: {
       opacity: 0, // Removed y-axis movement
       scale: 0.98 // Subtle scale instead of vertical movement
     },
-    show: { 
+    show: {
       opacity: 1,
       scale: 1,
       transition: {
@@ -99,9 +104,9 @@ const ArchiveProjects = () => {
   };
 
   return (
-    <div 
-      ref={ref} 
-      className="w-[90%] md:w-[100%] flex justify-center mt-10 mb-10  items-center h-auto md:h-screen"
+    <div
+      ref={ref}
+      className="w-[100%] md:w-[100%] flex justify-center pt-20 pb-10  items-center h-auto md:h-screen"
     >
       <motion.div
         initial="hidden"
@@ -113,12 +118,12 @@ const ArchiveProjects = () => {
         <motion.p variants={item} className="text-[#64ffda] mb-8">A list of things I've worked on</motion.p>
 
         <div className="overflow-x-auto" style={{ overflow: 'hidden' }}> {/* Removed scrollbar */}
-          <motion.table 
+          <motion.table
             className="w-full text-left text-[#a8b2d1] text-sm font-mono border-collapse"
             variants={container}
           >
             <thead>
-              <motion.tr 
+              <motion.tr
                 className="border-b border-[#233554]"
                 variants={item}
               >

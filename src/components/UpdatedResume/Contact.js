@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
+
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
