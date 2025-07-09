@@ -100,7 +100,10 @@ const ProjectItem = ({ project, index }) => {
 
       {/* Text Content */}
       <motion.div className="md:w-1/2 w-full relative z-10" variants={container}>
-        <motion.h3 variants={item} className="text-white text-xl font-semibold mb-4">{project.title}</motion.h3>
+      <div className='mb-4 text-[#a8b2d1] font-mono text-[12px]'>
+                <motion.h3 variants={item} className="text-white text-xl font-semibold">{project.title}</motion.h3>
+        <p>(2024)</p>
+      </div>
         <motion.div variants={item} className="bg-[#112240] text-[#a8b2d1] p-5 rounded shadow-md mb-4">
           <p>{project.description}</p>
         </motion.div>
