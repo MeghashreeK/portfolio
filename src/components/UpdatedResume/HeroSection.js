@@ -2,14 +2,16 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const HeroSection = () => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        delay: 1.5,
+        delay: isMobile ? 0.5 : 1.5,
         staggerChildren: 0.5,
-        delayChildren: 0.3
+        delayChildren: isMobile ? 0.1 : 0.3
       }
     }
   }
