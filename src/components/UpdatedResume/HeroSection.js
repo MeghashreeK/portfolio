@@ -48,7 +48,7 @@ const HeroSection = () => {
     >
       <div className="w-[80%] mx-auto">
        
-        <motion.p variants={item} className="text-[#64FFCF] text-[16px] font-mono mb-4 ml-1">Hi my name is</motion.p>
+        <motion.p variants={item} className="text-[#64FFCF] text-[16px] font-mono mb-4 ml-1">Hi, my name is</motion.p>
 
         <motion.h1 variants={item} className="text-[clamp(40px,8vw,80px)]  font-bold text-white leading-tight">
           Meghashree Kunder<span className="text-[clamp(40px,8vw,80px)]">.</span>
